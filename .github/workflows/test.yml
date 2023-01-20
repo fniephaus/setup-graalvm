@@ -34,5 +34,5 @@ jobs:
         run: |
           echo 'public class HelloWorld { public static void main(String[] args) { System.out.println("Hello, World!"); } }' > HelloWorld.java
           javac HelloWorld.java
-          native-image -H:+BuildOutputColorful HelloWorld
+          native-image -H:+BuildOutputColorful -H:-BuildOutputLinks HelloWorld
           ./helloworld
